@@ -14,9 +14,9 @@ with open("smart.csv", "r") as csvfile:
             "waste": waste,
             "qualityoflife": qualityoflife,
         }
-        supabase_url = "https://xzesgzaoewbtbiivxcal.supabase.co/rest/v1/ranking"
+        supabase_url = ""
         headers = {
-            "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh6ZXNnemFvZXdidGJpaXZ4Y2FsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MjE3ODksImV4cCI6MjAyNjA5Nzc4OX0.D5II1tvD3grGOoNwMkDsibaFBR1TvitYz5J5b8RIi7k",
+            "apikey": "",
             "Content-Type": "application/json",
         }
         response = requests.post(supabase_url, headers=headers, json=data)
