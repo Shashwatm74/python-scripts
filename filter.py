@@ -1,7 +1,7 @@
 import requests
 
 # Replace 'YOUR_GEOAPIFY_API_KEY' with your actual API key
-api_key = 'c8588b6778b94c1da71c7c90926bccf4'
+api_key = ''
 
 def get_address(latitude, longitude):
     url = f'https://api.geoapify.com/v1/geocode/reverse?lat={latitude}&lon={longitude}&apiKey={api_key}'
