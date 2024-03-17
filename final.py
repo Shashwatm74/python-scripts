@@ -6,7 +6,7 @@ import re
 from datetime import datetime
 import vonage
 
-api_key = 'c8588b6778b94c1da71c7c90926bccf4'
+api_key = ''
 
 def get_address(latitude, longitude):
     url = f'https://api.geoapify.com/v1/geocode/reverse?lat={latitude}&lon={longitude}&apiKey={api_key}'
@@ -151,9 +151,9 @@ while True:
                 "status": status,
                 "timestamp": timestamp,
             }
-            supabase_url = "https://xzesgzaoewbtbiivxcal.supabase.co/rest/v1/wastedata"
+            supabase_url = ""
             headers = {
-                "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh6ZXNnemFvZXdidGJpaXZ4Y2FsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MjE3ODksImV4cCI6MjAyNjA5Nzc4OX0.D5II1tvD3grGOoNwMkDsibaFBR1TvitYz5J5b8RIi7k",
+                "apikey": "",
                 "Content-Type": "application/json",
             }
             response = requests.post(supabase_url, headers=headers, json=data)
@@ -172,7 +172,7 @@ while True:
                 else:
                     print("Failed to fetch address.")
 
-                client = vonage.Client(key="2f4a1b8f", secret="IrZszE0IqVimlwir")
+                client = vonage.Client(key="", secret="")
                 sms = vonage.Sms(client)
                 responseData = sms.send_message(
                     {
